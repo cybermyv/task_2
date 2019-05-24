@@ -1,65 +1,67 @@
 html,
 body {
-	height: 100%;
+    height: 100%;
 }
 
 .wrapper {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: stretch;
-	align-content: stretch;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
 }
 
 .container {
-	margin: 5px;
-	padding: 5px;
-	flex: 1 0 auto;
+    margin: 5px;
+    padding: 5px;
+    flex: 1 0 auto;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 auto;
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px solid #bdbdbd;
 }
 
 #caption {
-	
-	width: 100%;
-	text-align: center;
-	background-color: #1e90ff;
+    width: 100%;
+    /* text-align: center; */
+    background-color: #1e90ff;
 }
-header {
-	border-bottom: 1px solid #bdbdbd;
-}
+
 form {
-	padding: 10px;
-	width: 300px;
-	border: 1px solid black;
-	text-align: left;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid black;
+    text-align: left;
 }
 
 .box {
-	width: 100%;
-	padding: 10px 0 10px 0;
+    width: 100%;
+    padding: 10px 0 10px 0;
 }
 
 .box label {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .box input {
-	width: 100%;
+    width: 100%;
 }
 
 .box:last-child {
-	align-self: flex-start;
+    align-self: flex-start;
 }
 
 footer {
-	flex: 0 0 auto;
-	text-align: center;
-	background-color: #1e90ff;
-	margin-bottom: 20px;
+    flex: 0 0 auto;
+    text-align: center;
+    background-color: #1e90ff;
+    margin-bottom: 20px;
 }
