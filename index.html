@@ -13,19 +13,18 @@
     <div class="wrapper">
         <header>
                 <h1 id="caption">Задание 2</h1>
-                
-                    Создать страницу, содержащую скрипт, выводящий все возможные ходы шахматного коня из заданной позиции. В
-                    качестве входящего параметра необходимо принимать текущее положение фигуры.
-                
+                Создать страницу, содержащую скрипт, выводящий все возможные ходы шахматного коня из заданной позиции. В
+                качестве входящего параметра необходимо принимать текущее положение фигуры.
         </header>
         <main class="container">
                 <form>
                     <div class="box">
-                        <label for="initial_position">Исходное положение:</label><br>
-                        <input type="text" id="initial_position">
+                        <label for="initial_position">Исходное положение:</label><br/>
+                        <input type="text" id="initial_position" maxlength="2" minlength="2"/>
                     </div>
                     <div class="box">
-                        <button id="result_btn">Ок</button>
+                        <button type="button" id="result_btn">Ок</button>
+                        
                     </div>
                 </form>
         </main>

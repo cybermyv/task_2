@@ -31,7 +31,7 @@ header {
 
 #caption {
     width: 100%;
-    /* text-align: center; */
+    text-align: center;
     background-color: #1e90ff;
 }
 
@@ -53,11 +53,10 @@ form {
 
 .box input {
     width: 100%;
+    box-sizing: border-box;
 }
 
-.box:last-child {
-    align-self: flex-start;
-}
+
 
 footer {
     flex: 0 0 auto;

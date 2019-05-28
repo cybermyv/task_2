@@ -3,21 +3,14 @@
 
 	const el_btn = document.querySelector('#result_btn');
 
-	el_btn.addEventListener('click', function () {
-		horseMove();
-	});
+	el_btn.addEventListener('click', horseMove);
 
 	function initialValidation(value) {
-		var regex = new RegExp('^[A-H][1-8]');
+		let regex = new RegExp('^[A-H][1-8]');
 
-		if (value.length !== 2) {
-			alert('Начальное положение задается двумя символами \n латинской буквой от A до H и цифрой от 1 до 8');
+		if (!regex.test(value)) {
+			alert('Начальное положение фигуры выходит за пределы доски!');
 			return;
-		} else {
-			if (!regex.test(value)) {
-				alert('Начальное положение фигуры выходит за пределы доски!');
-				return;
-			}
 		}
 		return value;
 	}
@@ -43,12 +36,12 @@
 			result.push(row[horseX - 1] + (horseY + 2));
 		}
 
-		//-- верх - право
+		//-- верх - право 
 		if (horseX + 1 < 8 && horseY + 2 <= 8) {
 			result.push(row[horseX + 1] + (horseY + 2));
 		}
 
-		//-- право - верх
+		//-- право - верх 
 		if (horseX + 2 < 8 && horseY + 1 <= 8) {
 			result.push(row[horseX + 2] + (horseY + 1));
 		}
@@ -75,11 +68,14 @@
 
 	function horseMove() {
 		const initPosition = document.querySelector('#initial_position').value;
-		let str = initPosition[0].toUpperCase() + initPosition.slice(1);
 
-		if (initialValidation(str)) calculateMove(str);
+		if (initPosition) {
+			let str = initPosition[0].toUpperCase() + initPosition.slice(1);
 
-		return;
+			if (initialValidation(str)) calculateMove(str);
+
+			return;
+		}
 	}
 })();
 
